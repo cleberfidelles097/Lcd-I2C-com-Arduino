@@ -6,10 +6,12 @@ LiquidCrystal_I2C lcd(0x20 , 16 , 2);
 void setup(){
   lcd.init();
   lcd.backlight();
-  lcd.setCursor(1 , 0);
-  lcd.print("Hello,World!!!");
+
 }
 
 void loop(){
-  
+  for(int i = 0; i <= 16 ; i++){
+    lcd.setCursor(i , 0);
+    lcd.print("Hello,World!!!");
+  }
 }
